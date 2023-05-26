@@ -85,7 +85,7 @@ import {IAaveEcosystemReserveController, AaveMisc} from './AaveMisc.sol';
     return acc;
   }, '')}`;
   fs.writeFileSync(`./src/ts/AaveAddressBook.ts`, aaveAddressBookJsTemplate);
-  await generateV2Pools(pools.filter((pool) => pool.version === 2));
+  // await generateV2Pools(pools.filter((pool) => pool.version === 2));
   await generateV3Pools(pools.filter((pool) => pool.version === 3));
 }
 

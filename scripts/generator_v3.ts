@@ -67,7 +67,7 @@ export async function fetchPoolV3Addresses(pool: Pool): Promise<PoolV3WithAddres
             symbol: reserve.symbol,
             underlyingAsset: reserve.underlyingAsset,
             decimals: reserve.decimals,
-            aTokenAddress: reserve.aTokenAddress,
+            aTokenAddress: reserve.hTokenAddress,
             stableDebtTokenAddress: reserve.stableDebtTokenAddress,
             variableDebtTokenAddress: reserve.variableDebtTokenAddress,
             interestRateStrategyAddress: reserve.interestRateStrategyAddress,

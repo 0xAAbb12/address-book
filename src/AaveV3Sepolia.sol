@@ -47,7 +47,7 @@ library AaveV3Sepolia {
 
   address internal constant WALLET_BALANCE_PROVIDER = 0x5028a26Ba880F72eD44b6E4cf024f318217869b6;
 
-  address internal constant UI_POOL_DATA_PROVIDER = 0x832c2B8efb16Ffabc73e1F23D31f3B574Ff0b7F6;
+  address internal constant UI_POOL_DATA_PROVIDER = 0xFC5FD98A729cC93a0510e98d859b45A88E0Ce4C0;
 
   address internal constant UI_INCENTIVE_DATA_PROVIDER = 0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4;
 }
