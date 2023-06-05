@@ -3,9 +3,12 @@ import {Pool} from './config';
 import fs from 'fs';
 import addressProviderV3ABI from './abi/address_provider_v3_abi.json';
 import poolV3ABI from './abi/pool_v3_abi.json';
-import aTokenV3ABI from './abi/aToken_v3_abi.json';
-import stableDebtTokenV3ABI from './abi/stableDebtToken_v3_abi.json';
-import variableDebtTokenV3ABI from './abi/variableDebtToken_v3_abi.json';
+// import aTokenV3ABI from './abi/aToken_v3_abi.json';
+// import stableDebtTokenV3ABI from './abi/stableDebtToken_v3_abi.json';
+// import variableDebtTokenV3ABI from './abi/variableDebtToken_v3_abi.json';
+import aTokenV3ABI from './abi/HToken.json';
+import stableDebtTokenV3ABI from './abi/StableDebtToken.json';
+import variableDebtTokenV3ABI from './abi/VariableDebtToken.json';
 import collectorV3ABI from './abi/collector_v3_abi.json';
 import rewardsControllerABI from './abi/rewardsController_v3_abi.json';
 import uipooldataProviderABI from './abi/uipooldata_provider.json';
@@ -87,13 +90,14 @@ export async function fetchPoolV3Addresses(pool: Pool): Promise<PoolV3WithAddres
 
     const collector = await aTokenContract.RESERVE_TREASURY_ADDRESS();
 
-    const defaultIncentivesController = await aTokenContract.getIncentivesController();
+    // const defaultIncentivesController = await aTokenContract.getIncentivesController();
+    const defaultIncentivesController = '0x0000000000000000000000000000000000000000';
 
     const defaultATokenImplementation = bytes32toAddress(
       await getImplementationStorageSlot(pool.provider, reservesData[0].aTokenAddress)
     );
 
-    const aTokenRevision = await aTokenContract.ATOKEN_REVISION();
+    const aTokenRevision = await aTokenContract.HTOKEN_REVISION();
 
     await sleep(1000);
 
@@ -120,16 +124,16 @@ export async function fetchPoolV3Addresses(pool: Pool): Promise<PoolV3WithAddres
     const collectorContract = new ethers.Contract(collector, collectorV3ABI, pool.provider);
 
     let emissionManager = '0x0000000000000000000000000000000000000000';
-    try {
-      const incentivesControllerContract = await new ethers.Contract(
-        defaultIncentivesController,
-        rewardsControllerABI,
-        pool.provider
-      );
-      emissionManager = await incentivesControllerContract.getEmissionManager();
-    } catch (e) {
-      console.log(`old version of incentives controller deployed on ${pool.name}`);
-    }
+    // try {
+    //   const incentivesControllerContract = await new ethers.Contract(
+    //     defaultIncentivesController,
+    //     rewardsControllerABI,
+    //     pool.provider
+    //   );
+    //   emissionManager = await incentivesControllerContract.getEmissionManager();
+    // } catch (e) {
+    //   console.log(`old version of incentives controller deployed on ${pool.name}`);
+    // }
 
     const collectorController = await collectorContract.getFundsAdmin();
 
