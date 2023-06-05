@@ -48,6 +48,12 @@ library AaveV3Sepolia {
   address internal constant WALLET_BALANCE_PROVIDER = 0x0c652959164929f4d4446bceD6b5eEb64649D80F;
 
   address internal constant UI_POOL_DATA_PROVIDER = 0x71fD7717e98168060e465c22331974B8b00F647C;
+
+  address internal constant GAUGE_FACTORY = 0x31A8033C8528c07B45A0eAc920Ca6e8693FFA0Df;
+
+  address internal constant GAUGE_CONTROLLER = 0x89918517C74E7236B38f6fe6969b8262f31D1b73;
+
+  address internal constant MINTER = 0x9791ceb0F8483e9Bee77d2c40Eb477df1C377fCd;
 }
 
 library AaveV3SepoliaAssets {
