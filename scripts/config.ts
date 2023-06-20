@@ -18,6 +18,7 @@ export enum ChainId {
   optimism_goerli = 420,
   harmony = 1666600000,
   sepolia = 11155111,
+  hope = 1337,
 }
 
 const RPC_PROVIDERS = {
@@ -35,6 +36,7 @@ const RPC_PROVIDERS = {
   [ChainId.fantom]: 'https://rpc.ftm.tools',
   [ChainId.fantom_testnet]: 'https://rpc.ankr.com/fantom_testnet',
   [ChainId.sepolia]: 'https://rpc.sepolia.org',
+  [ChainId.hope]: 'https://ganache-test2.hivefin.net',
 } as const;
 
 export interface Pool {
@@ -149,6 +151,23 @@ export const pools: Pool[] = [
   {
     name: 'AaveV3Sepolia',
     chainId: ChainId.sepolia,
+    addressProvider: '0x2E4E2b4C1278EB343eaa2FB28Bce0cBbE66D39F4',
+    version: 3,
+    testnet: true,
+    additionalAddresses: {
+      WETH_GATEWAY: '0xBF38ac63dA8d99c93eCdc7343ed8423fe5362232',
+      FAUCET: '0x51d65246053FBCf1DEE31373e7422845Abc958f4',
+      WALLET_BALANCE_PROVIDER: '0x5683b840f9A9b00cBA199CE6df6c2a0aa48aaaD0',
+      UI_POOL_DATA_PROVIDER: '0xa51EDb6992Ac8bdb81D0c33817cde6f54cAF7121',
+      // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
+      GAUGE_FACTORY: '0x165Ea9B9A8D265d944D2B2f72833426b361f5ffE',
+      GAUGE_CONTROLLER: '0x89918517C74E7236B38f6fe6969b8262f31D1b73',
+      MINTER: '0x9791ceb0F8483e9Bee77d2c40Eb477df1C377fCd'
+    },
+  },
+  {
+    name: 'AaveV3Hope',
+    chainId: ChainId.hope,
     addressProvider: '0x2E4E2b4C1278EB343eaa2FB28Bce0cBbE66D39F4',
     version: 3,
     testnet: true,
