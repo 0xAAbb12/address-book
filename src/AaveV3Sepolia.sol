@@ -49,7 +49,7 @@ library AaveV3Sepolia {
 
   address internal constant UI_POOL_DATA_PROVIDER = 0xf91588f55DE8532e9bb0CBb06210407aC9574ce3;
 
-  address internal constant GAUGE_FACTORY = 0x93d9428bF93811e3A13380bCb3c8Fe00c45eaAbd;
+  address internal constant GAUGE_FACTORY = 0x30a36f63ee78d8DCbEEf0fc40fFFA3f1BE8A2D75;
 
   address internal constant GAUGE_CONTROLLER = 0x405604a1F28e89B736353016CF504Fe26C0E32Df;
 
