@@ -23,7 +23,7 @@ export enum ChainId {
 
 const RPC_PROVIDERS = {
   [ChainId.mainnet]: 'https://rpc.flashbots.net',
-  [ChainId.goerli]: 'https://eth-goerli.public.blastapi.io',
+  [ChainId.goerli]: 'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
   [ChainId.mumbai]: 'https://polygon-testnet.public.blastapi.io',
   [ChainId.polygon]: 'https://polygon-rpc.com',
   [ChainId.fuji]: 'https://api.avax-test.network/ext/bc/C/rpc',
@@ -148,40 +148,40 @@ export const pools: Pool[] = [
   //     FAUCET: '0x681860075529352da2C94082Eb66c59dF958e89C',
   //   },
   // },
-  {
-    name: 'AaveV3Sepolia',
-    chainId: ChainId.sepolia,
-    addressProvider: '0xDf524Ea0664De971710489De15CF386450a2dfBD',
-    version: 3,
-    testnet: true,
-    additionalAddresses: {
-      WETH_GATEWAY: '0xae8A91AEDefDe65d2eb931A6b8b31854A8bd7C3c',
-      FAUCET: '0xB653EC2fd50562d87EC15e1bECfAbeC7e318A5f1',
-      WALLET_BALANCE_PROVIDER: '0xb64AFbFDe5f4606c54d58602402299170E2FAEee',
-      UI_POOL_DATA_PROVIDER: '0xf91588f55DE8532e9bb0CBb06210407aC9574ce3',
-      // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
-      GAUGE_FACTORY: '0x30a36f63ee78d8DCbEEf0fc40fFFA3f1BE8A2D75',
-      GAUGE_CONTROLLER: '0x405604a1F28e89B736353016CF504Fe26C0E32Df',
-      MINTER: '0x2DD369a0126B014f5A574f92FB5510B4EaB4eF01'
-    },
-  },
-  {
-    name: 'AaveV3Hope',
-    chainId: ChainId.hope,
-    addressProvider: '0x2E4E2b4C1278EB343eaa2FB28Bce0cBbE66D39F4',
-    version: 3,
-    testnet: true,
-    additionalAddresses: {
-      WETH_GATEWAY: '0xBF38ac63dA8d99c93eCdc7343ed8423fe5362232',
-      FAUCET: '0x51d65246053FBCf1DEE31373e7422845Abc958f4',
-      WALLET_BALANCE_PROVIDER: '0x5683b840f9A9b00cBA199CE6df6c2a0aa48aaaD0',
-      UI_POOL_DATA_PROVIDER: '0xa51EDb6992Ac8bdb81D0c33817cde6f54cAF7121',
-      // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
-      GAUGE_FACTORY: '0x165Ea9B9A8D265d944D2B2f72833426b361f5ffE',
-      GAUGE_CONTROLLER: '0x89918517C74E7236B38f6fe6969b8262f31D1b73',
-      MINTER: '0x9791ceb0F8483e9Bee77d2c40Eb477df1C377fCd'
-    },
-  },
+  // {
+  //   name: 'AaveV3Sepolia',
+  //   chainId: ChainId.sepolia,
+  //   addressProvider: '0xDf524Ea0664De971710489De15CF386450a2dfBD',
+  //   version: 3,
+  //   testnet: true,
+  //   additionalAddresses: {
+  //     WETH_GATEWAY: '0xae8A91AEDefDe65d2eb931A6b8b31854A8bd7C3c',
+  //     FAUCET: '0xB653EC2fd50562d87EC15e1bECfAbeC7e318A5f1',
+  //     WALLET_BALANCE_PROVIDER: '0xb64AFbFDe5f4606c54d58602402299170E2FAEee',
+  //     UI_POOL_DATA_PROVIDER: '0xf91588f55DE8532e9bb0CBb06210407aC9574ce3',
+  //     // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
+  //     GAUGE_FACTORY: '0x30a36f63ee78d8DCbEEf0fc40fFFA3f1BE8A2D75',
+  //     GAUGE_CONTROLLER: '0x405604a1F28e89B736353016CF504Fe26C0E32Df',
+  //     MINTER: '0x2DD369a0126B014f5A574f92FB5510B4EaB4eF01'
+  //   },
+  // },
+  // {
+  //   name: 'AaveV3Hope',
+  //   chainId: ChainId.hope,
+  //   addressProvider: '0xDf524Ea0664De971710489De15CF386450a2dfBD',
+  //   version: 3,
+  //   testnet: true,
+  //   additionalAddresses: {
+  //     WETH_GATEWAY: '0xae8A91AEDefDe65d2eb931A6b8b31854A8bd7C3c',
+  //     FAUCET: '0xB653EC2fd50562d87EC15e1bECfAbeC7e318A5f1',
+  //     WALLET_BALANCE_PROVIDER: '0xb64AFbFDe5f4606c54d58602402299170E2FAEee',
+  //     UI_POOL_DATA_PROVIDER: '0xf91588f55DE8532e9bb0CBb06210407aC9574ce3',
+  //     // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
+  //     GAUGE_FACTORY: '0x30a36f63ee78d8DCbEEf0fc40fFFA3f1BE8A2D75',
+  //     GAUGE_CONTROLLER: '0x405604a1F28e89B736353016CF504Fe26C0E32Df',
+  //     MINTER: '0x2DD369a0126B014f5A574f92FB5510B4EaB4eF01'
+  //   },
+  // },
   // TODO 
   // {
   //   name: 'AaveV3Sepolia',
@@ -197,20 +197,23 @@ export const pools: Pool[] = [
   //     UI_INCENTIVE_DATA_PROVIDER: '0xE58064d33eB0ae23E710Cd818824BA70Fa4f2477',
   //   },
   // },
-  // {
-  //   name: 'AaveV3Goerli',
-  //   chainId: ChainId.goerli,
-  //   addressProvider: '0xC911B590248d127aD18546B186cC6B324e99F02c',
-  //   version: 3,
-  //   testnet: true,
-  //   additionalAddresses: {
-  //     WETH_GATEWAY: '0x2A498323aCaD2971a8b1936fD7540596dC9BBacD',
-  //     FAUCET: '0xA70D8aD6d26931d0188c642A66de3B6202cDc5FA',
-  //     WALLET_BALANCE_PROVIDER: '0xe0bb4593f74B804B9aBd9a2Ec6C71663cEE64E29',
-  //     UI_POOL_DATA_PROVIDER: '0xb00A75686293Fea5DA122E8361f6815A0B0AF48E',
-  //     UI_INCENTIVE_DATA_PROVIDER: '0xf4Ce3624c8D047aF8b069D044f00bF6774B4dEc0',
-  //   },
-  // },
+  {
+    name: 'AaveV3Goerli',
+    chainId: ChainId.goerli,
+    addressProvider: '0xa9d27b54F56CcF3E651465Dc1cda82896fC0FfF7',
+    version: 3,
+    testnet: true,
+    additionalAddresses: {
+      WETH_GATEWAY: '0x5aC0d35C55E56F70F9a2F7b9caC5757BaadE96de',
+      FAUCET: '0x89190c0CB7AD5591c349d080DF40663dA9c3d83b',
+      WALLET_BALANCE_PROVIDER: '0x75e59165d7145B3E4B357Aa7Ad272aaf03b82505',
+      UI_POOL_DATA_PROVIDER: '0xF80e3E61b87855AA2DEd9Ba6B6CCe3CAd1f76551',
+      // UI_INCENTIVE_DATA_PROVIDER: '0xf4Ce3624c8D047aF8b069D044f00bF6774B4dEc0',
+      GAUGE_FACTORY: '0xdeB2e5895653574ef759Ddae11212564553eC2B7',
+      GAUGE_CONTROLLER: '0xb4fE4653F175C36e8EEab35229fdB5702789B9F2',
+      MINTER: '0x3c2AB5E5D31872B920497bD787cFFAba9fB3615A'
+    },
+  },
   // {
   //   name: 'AaveV3GoerliGho',
   //   chainId: ChainId.goerli,
