@@ -148,23 +148,23 @@ export const pools: Pool[] = [
   //     FAUCET: '0x681860075529352da2C94082Eb66c59dF958e89C',
   //   },
   // },
-  // {
-  //   name: 'AaveV3Sepolia',
-  //   chainId: ChainId.sepolia,
-  //   addressProvider: '0xDf524Ea0664De971710489De15CF386450a2dfBD',
-  //   version: 3,
-  //   testnet: true,
-  //   additionalAddresses: {
-  //     WETH_GATEWAY: '0xae8A91AEDefDe65d2eb931A6b8b31854A8bd7C3c',
-  //     FAUCET: '0xB653EC2fd50562d87EC15e1bECfAbeC7e318A5f1',
-  //     WALLET_BALANCE_PROVIDER: '0xb64AFbFDe5f4606c54d58602402299170E2FAEee',
-  //     UI_POOL_DATA_PROVIDER: '0xf91588f55DE8532e9bb0CBb06210407aC9574ce3',
-  //     // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
-  //     GAUGE_FACTORY: '0x30a36f63ee78d8DCbEEf0fc40fFFA3f1BE8A2D75',
-  //     GAUGE_CONTROLLER: '0x405604a1F28e89B736353016CF504Fe26C0E32Df',
-  //     MINTER: '0x2DD369a0126B014f5A574f92FB5510B4EaB4eF01'
-  //   },
-  // },
+  {
+    name: 'AaveV3Sepolia',
+    chainId: ChainId.sepolia,
+    addressProvider: '0xa0Cf784ff893442ef0029E39D56EcA118b651171',
+    version: 3,
+    testnet: true,
+    additionalAddresses: {
+      WETH_GATEWAY: '0x26a58146085A0BA2BCd78D3cCF2d053514c3F803',
+      FAUCET: '0xDaE82E8C1BD53827b24C5B0259CC629aD68a8fa6',
+      WALLET_BALANCE_PROVIDER: '0x4e639dA9720f527A893EeC84Ba1514C46bC68D81',
+      UI_POOL_DATA_PROVIDER: '0xA5B71cEFFbe83fa5623739Ba25C1bC1Ee9024738',
+      // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
+      GAUGE_FACTORY: '0xeb5240B69668b6f57738ab35eF2Fb819897901B9',
+      GAUGE_CONTROLLER: '0x97D757E21AE9Fe4eeBaC22B2B01ed5c9e85a586E',
+      MINTER: '0xeaB3D0eb85A6052C278Ea1FB7Ed5e699e97B650E'
+    },
+  },
   // {
   //   name: 'AaveV3Hope',
   //   chainId: ChainId.hope,
