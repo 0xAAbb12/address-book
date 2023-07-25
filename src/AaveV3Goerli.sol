@@ -6,131 +6,145 @@ import {IPoolAddressesProvider, IPool, IPoolConfigurator, IAaveOracle, IPoolData
 
 library AaveV3Goerli {
   IPoolAddressesProvider internal constant POOL_ADDRESSES_PROVIDER =
-    IPoolAddressesProvider(0xa9d27b54F56CcF3E651465Dc1cda82896fC0FfF7);
+    IPoolAddressesProvider(0x4A4e3D9eE2CAD18D62bb8f6252C4A460279fC1f7);
 
-  IPool internal constant POOL = IPool(0x19B9cE0c09A00BDD9190240f2055def7760C4d1E);
+  IPool internal constant POOL = IPool(0xdcd1Ff8AA5cF289d17304dA2cdbdA3225130e365);
 
   IPoolConfigurator internal constant POOL_CONFIGURATOR =
-    IPoolConfigurator(0x848BA7525CC84399d7cDdddeDAA4e3a8cEC277ba);
+    IPoolConfigurator(0xEC019De4C9b04B882f2503b5A72e7d2cecAF8Ef9);
 
-  IAaveOracle internal constant ORACLE = IAaveOracle(0x1acca61b27E97aAcf8330c78A062F4123A79f243);
+  IAaveOracle internal constant ORACLE = IAaveOracle(0xc48f71233975564d15b985986b92f1494a999E85);
 
   IPoolDataProvider internal constant AAVE_PROTOCOL_DATA_PROVIDER =
-    IPoolDataProvider(0xd81c290B780e60EF25B81063D3Dc2a2706de3E27);
+    IPoolDataProvider(0xB64FB0e0Be8D5BfbC4348Fd747eEf7D96322E42b);
 
   IACLManager internal constant ACL_MANAGER =
-    IACLManager(0xDa57F7C5eB046ac7256Cd814ddF2722131c3Ff19);
+    IACLManager(0x730D4c706c6c77730702C8939e44a2c6a0820180);
 
   address internal constant ACL_ADMIN = 0xc6C1eF70746F6Bed0A43C912B2B2047f25d3eA87;
 
-  address internal constant COLLECTOR = 0xC2E7266ED9397Bf0b4AC50AF8C65066FbfF0F8e9;
+  address internal constant COLLECTOR = 0xcb8f88F5B1453a9bB72af091c2e305eaf2FE030b;
 
   ICollector internal constant COLLECTOR_CONTROLLER =
-    ICollector(0x13712AcB9231c6cba5828Aa978748f016f7A350E);
+    ICollector(0x1821610a350D43c3dA271755B39B970783b8b384);
 
   address internal constant DEFAULT_INCENTIVES_CONTROLLER =
     0x0000000000000000000000000000000000000000;
 
-  address internal constant DEFAULT_A_TOKEN_IMPL_REV_1 = 0x7877338B1Bd920544069C94C08922907460E1A04;
+  address internal constant DEFAULT_A_TOKEN_IMPL_REV_1 = 0x97BF4EB6c8b62c6C3567C458Bdf5c7b2b270fDEa;
 
   address internal constant DEFAULT_VARIABLE_DEBT_TOKEN_IMPL_REV_1 =
-    0x6fe715bBed091d1130B999A4871353B91f49fF7C;
+    0xE5013dF7b1035c6b3aFF46F972e941DBeAF79FC7;
 
   address internal constant DEFAULT_STABLE_DEBT_TOKEN_IMPL_REV_1 =
-    0x485dA1cD692a986EC289B974Af739685d9bF6B56;
+    0x7ba9bC30aa5AB894700b6A32e37cfd4EC28e01c6;
 
   address internal constant EMISSION_MANAGER = 0x0000000000000000000000000000000000000000;
 
-  address internal constant WETH_GATEWAY = 0x5aC0d35C55E56F70F9a2F7b9caC5757BaadE96de;
+  address internal constant WETH_GATEWAY = 0x35846aFf520988f0E856F76fEC5656357a8c46E7;
 
-  address internal constant FAUCET = 0x89190c0CB7AD5591c349d080DF40663dA9c3d83b;
+  address internal constant FAUCET = 0x13550d05Ea6a8907d295e4f17e707E4b43d2e26D;
 
-  address internal constant WALLET_BALANCE_PROVIDER = 0x75e59165d7145B3E4B357Aa7Ad272aaf03b82505;
+  address internal constant WALLET_BALANCE_PROVIDER = 0x04Cc5547fD6b8ef7923AEd1c0fBf0E51D3f3F97e;
 
-  address internal constant UI_POOL_DATA_PROVIDER = 0xF80e3E61b87855AA2DEd9Ba6B6CCe3CAd1f76551;
+  address internal constant UI_POOL_DATA_PROVIDER = 0xFc1A5E22A49098BD721Ba4d8E4D6540C84CAb14b;
 
-  address internal constant GAUGE_FACTORY = 0xdeB2e5895653574ef759Ddae11212564553eC2B7;
+  address internal constant GAUGE_FACTORY = 0xF6bEe4C1B0aBBC88Df5BF46062C26BE2007e36D7;
 
-  address internal constant GAUGE_CONTROLLER = 0xb4fE4653F175C36e8EEab35229fdB5702789B9F2;
+  address internal constant GAUGE_CONTROLLER = 0x4c2D5F39D7e936Ca9BE04feB665971e61B793Acb;
 
-  address internal constant MINTER = 0x3c2AB5E5D31872B920497bD787cFFAba9fB3615A;
+  address internal constant MINTER = 0xf38F371b16Aa1e3396A64BC03e4995C9B67fb3F3;
 }
 
 library AaveV3GoerliAssets {
-  address internal constant DAI_UNDERLYING = 0x5B71dC777A8aDCba065A644e30BBEeB8fCca273f;
+  address internal constant WETH_UNDERLYING = 0x6Cc53D3AeaEe7aAfbd2Ac304AA64d017E6cb4f2a;
 
-  address internal constant DAI_A_TOKEN = 0xBc9cc41995E3E314ff6De75B30202a281257142D;
+  address internal constant WETH_A_TOKEN = 0x5828C686Ca8670bF4ebEaDa1eFd3E6667dB95313;
 
-  address internal constant DAI_V_TOKEN = 0x31b4D520F72f677D74d896432A837E1e828F0feF;
+  address internal constant WETH_V_TOKEN = 0xd89b6104265f07Bf32899938D64EE1Cd14698FAB;
 
-  address internal constant DAI_S_TOKEN = 0x95bE4B1ABD6fD238A561F4C3B1Bab4e32E7b425C;
-
-  address internal constant DAI_ORACLE = 0x0d79df66BE487753B02D015Fb622DED7f0E9798d;
-
-  address internal constant DAI_INTEREST_RATE_STRATEGY = 0xFc3f45e11f2CF20d2a2fe6Aa34e32B54D039487A;
-
-  address internal constant USDC_UNDERLYING = 0x235eBFC0bE0E58cF267D1c5BCb8c03a002A711ed;
-
-  address internal constant USDC_A_TOKEN = 0xCA34D8E65949BD67693F36C798C17A20eBDB76BF;
-
-  address internal constant USDC_V_TOKEN = 0x18a1933c40e723f8fD300355E807dC5beC377B2B;
-
-  address internal constant USDC_S_TOKEN = 0x7c8aA0dcaF8f7861dFA8fA1CEF6Dd86B3def1Fb9;
-
-  address internal constant USDC_ORACLE = 0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7;
-
-  address internal constant USDC_INTEREST_RATE_STRATEGY =
-    0x0382315971A5d7d75dB05686ac8bAC607CE1D0B8;
-
-  address internal constant WETH_UNDERLYING = 0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6;
-
-  address internal constant WETH_A_TOKEN = 0xCbf6e1215f0c99Ed3C3f6F0A5079283e5256db70;
-
-  address internal constant WETH_V_TOKEN = 0x5Ae12D3d9ECDAEab9e176ff77BA15dBa1822A19D;
-
-  address internal constant WETH_S_TOKEN = 0xC1d144f23A1492e1bDCa7cC65F59e24134A773Cc;
+  address internal constant WETH_S_TOKEN = 0x0F82A7C5349D1122f3fC7b9AAf838094f5406263;
 
   address internal constant WETH_ORACLE = 0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e;
 
   address internal constant WETH_INTEREST_RATE_STRATEGY =
-    0x66b179569bE9DfdDB0546cfC8f9d364C345794F7;
+    0x243F49c98f2d0279fefF60888E7CceE6acF949ab;
 
-  address internal constant USDT_UNDERLYING = 0x3da37B4A2F5172580411DdcddDCcae857f9a7aE6;
+  address internal constant wstETH_UNDERLYING = 0x050af32f9FEA93231fCFf7a44181A2a7dA9b4A80;
 
-  address internal constant USDT_A_TOKEN = 0x3DBF41D28fd2Eee83DC6a54f0Ec88bFaAbB34d89;
+  address internal constant wstETH_A_TOKEN = 0x1a0D397E269a6d3A78bc45DafF5332172906cDfE;
 
-  address internal constant USDT_V_TOKEN = 0x4A52d3F52AB7d0d85FacF73Cb903e5Dd7fa7Db7C;
+  address internal constant wstETH_V_TOKEN = 0x6801980fE99f275663006d13b33E1462D369271f;
 
-  address internal constant USDT_S_TOKEN = 0x35C8b58b02c0058cC1d29C8374aa86151Ac94949;
+  address internal constant wstETH_S_TOKEN = 0x5a3eC67f7056c4F4026682f575F6af1D1cC2Ee27;
+
+  address internal constant wstETH_ORACLE = 0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e;
+
+  address internal constant wstETH_INTEREST_RATE_STRATEGY =
+    0x7a9029219480496dD6488052A1659DFCCA37E2B3;
+
+  address internal constant USDT_UNDERLYING = 0x1C6Cf7Df9dFC87d2C373FF12F713e3222356783f;
+
+  address internal constant USDT_A_TOKEN = 0xaFb8EECcbb65D95afAF8E14D918387D3702D2D28;
+
+  address internal constant USDT_V_TOKEN = 0x77151cd24BCD90b07e50Dbb17FF021f6119F24aa;
+
+  address internal constant USDT_S_TOKEN = 0xc5Ce89886Eb9D483D0dA8156792c397bee767CAc;
 
   address internal constant USDT_ORACLE = 0x0d79df66BE487753B02D015Fb622DED7f0E9798d;
 
   address internal constant USDT_INTEREST_RATE_STRATEGY =
-    0x0382315971A5d7d75dB05686ac8bAC607CE1D0B8;
+    0x4E5e1a85Df8EE82cda738E64F1585aB9c9548De0;
 
-  address internal constant HOPE_UNDERLYING = 0x9bA97e0913Dd0fbd4E5fedA936db9D1f1C632273;
+  address internal constant USDC_UNDERLYING = 0x832c2B8efb16Ffabc73e1F23D31f3B574Ff0b7F6;
 
-  address internal constant HOPE_A_TOKEN = 0x50F357357Ce6CA82924328aE2b534fc936C7A5B4;
+  address internal constant USDC_A_TOKEN = 0xB47cd8493838Fd2a4d044199d189518988422fFB;
 
-  address internal constant HOPE_V_TOKEN = 0xf211432D15F1356F386f78ff26305012127368d0;
+  address internal constant USDC_V_TOKEN = 0x9A422f6a0514d2199549bdaae721df756D8FBf09;
 
-  address internal constant HOPE_S_TOKEN = 0xeaeC7e02Da80ac2A2EC2d3f159865167AB716F7a;
+  address internal constant USDC_S_TOKEN = 0x05A63468991CF5eDb88C03f3ea1857d9dC70F2e5;
 
-  address internal constant HOPE_ORACLE = 0x99f4E627093D6Bba806ea18284fB5C5EA1De6753;
+  address internal constant USDC_ORACLE = 0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7;
+
+  address internal constant USDC_INTEREST_RATE_STRATEGY =
+    0x28Baf782eF42574a09815F6de81913d8871706a3;
+
+  address internal constant HOPE_UNDERLYING = 0xdC857E0d4C850deAe3a7735390243d3c444E552F;
+
+  address internal constant HOPE_A_TOKEN = 0x2173892d2F128Ed2Cb77e266351baA30ED404caa;
+
+  address internal constant HOPE_V_TOKEN = 0xa79512F8113bF1a14C6BB5f5f6e9a51cd0F9EEb8;
+
+  address internal constant HOPE_S_TOKEN = 0x8f29C7cE88cC18A29C13A8E6d42FeE8CaCE9718b;
+
+  address internal constant HOPE_ORACLE = 0x18a22B5667Ca2B304979465bde9ca9F14E7c312B;
 
   address internal constant HOPE_INTEREST_RATE_STRATEGY =
-    0x66b179569bE9DfdDB0546cfC8f9d364C345794F7;
+    0x1fcCCD70c0E95ef5fE5bcD6DE310623b80495A69;
 
-  address internal constant stHOPE_UNDERLYING = 0x89009881287EB51256141265B2f250b9960AaeE5;
+  address internal constant stHOPE_UNDERLYING = 0x09B4621e2A9dBd37550dC4923E60Ff0782Ef9250;
 
-  address internal constant stHOPE_A_TOKEN = 0xe034A5517C632A6B5C52D085d323a0fE96a8f913;
+  address internal constant stHOPE_A_TOKEN = 0x61C0407e54f1A3658a721B4AFe5214a60DBe193B;
 
-  address internal constant stHOPE_V_TOKEN = 0x1243d388C865Ca56E69765431e2ef1A299981AAB;
+  address internal constant stHOPE_V_TOKEN = 0x3d9a2479Fa542f534Cd3963028C83B8AA81420cd;
 
-  address internal constant stHOPE_S_TOKEN = 0x7F5796BEF7743490BEa6D89fc21dA2A608E9D36e;
+  address internal constant stHOPE_S_TOKEN = 0xafD2b1b1E5D3F366F29FaC95350eA46B560B5739;
 
-  address internal constant stHOPE_ORACLE = 0x99f4E627093D6Bba806ea18284fB5C5EA1De6753;
+  address internal constant stHOPE_ORACLE = 0x18a22B5667Ca2B304979465bde9ca9F14E7c312B;
 
   address internal constant stHOPE_INTEREST_RATE_STRATEGY =
-    0x66b179569bE9DfdDB0546cfC8f9d364C345794F7;
+    0x1fcCCD70c0E95ef5fE5bcD6DE310623b80495A69;
+
+  address internal constant WBTC_UNDERLYING = 0x5e457e88503c47C85C106edB4e27208bBBA26d7f;
+
+  address internal constant WBTC_A_TOKEN = 0xAbC6277aE6153a30dE06907ade770bD92a807bae;
+
+  address internal constant WBTC_V_TOKEN = 0x295818eA25828513D21672289f21072e943FBBD1;
+
+  address internal constant WBTC_S_TOKEN = 0x771514aD2F813d0c083B1C25CE26ac1A97652cAa;
+
+  address internal constant WBTC_ORACLE = 0xA39434A63A52E749F02807ae27335515BA4b07F7;
+
+  address internal constant WBTC_INTEREST_RATE_STRATEGY =
+    0x4b6eC5f518ee0A9e54ce81F0F7Ede9bD679BcBbb;
 }
