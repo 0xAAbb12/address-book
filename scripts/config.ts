@@ -22,7 +22,7 @@ export enum ChainId {
 }
 
 const RPC_PROVIDERS = {
-  [ChainId.mainnet]: 'https://rpc.flashbots.net',
+  [ChainId.mainnet]: 'https://eth.llamarpc.com',
   [ChainId.goerli]: 'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
   [ChainId.mumbai]: 'https://polygon-testnet.public.blastapi.io',
   [ChainId.polygon]: 'https://polygon-rpc.com',
@@ -77,24 +77,27 @@ export interface Token {
 }
 
 export const pools: Pool[] = [
-  // {
-  //   name: 'AaveV3Ethereum',
-  //   chainId: ChainId.mainnet,
-  //   addressProvider: '0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e',
-  //   version: 3,
-  //   additionalAddresses: {
-  //     POOL_ADDRESSES_PROVIDER_REGISTRY: '0xbaA999AC55EAce41CcAE355c77809e68Bb345170',
-  //     WETH_GATEWAY: '0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C',
-  //     RATES_FACTORY: '0xcC47c4Fe1F7f29ff31A8b62197023aC8553C7896',
-  //     REPAY_WITH_COLLATERAL_ADAPTER: '0x1809f186D680f239420B56948C58F8DbbCdf1E18',
-  //     SWAP_COLLATERAL_ADAPTER: '0x872fBcb1B582e8Cd0D0DD4327fBFa0B4C2730995',
-  //     LISTING_ENGINE: '0xE202F2fc4b6A37Ba53cfD15bE42a762A645FCA07',
-  //     WALLET_BALANCE_PROVIDER: '0xC7be5307ba715ce89b152f3Df0658295b3dbA8E2',
-  //     UI_POOL_DATA_PROVIDER: '0x91c0eA31b49B69Ea18607702c5d9aC360bf3dE7d',
-  //     UI_INCENTIVE_DATA_PROVIDER: '0x162A7AC02f547ad796CA549f757e2b8d1D9b10a6',
-  //     DELEGATION_AWARE_A_TOKEN_IMPL_REV_1: '0x21714092D90c7265F52fdfDae068EC11a23C6248',
-  //   },
-  // },
+  {
+    name: 'AaveV3Ethereum',
+    chainId: ChainId.mainnet,
+    addressProvider: '0xE94a20EF25d067743B9D965A8d46C1c035489b7d',
+    version: 3,
+    additionalAddresses: {
+      // POOL_ADDRESSES_PROVIDER_REGISTRY: '0xbaA999AC55EAce41CcAE355c77809e68Bb345170',
+      WETH_GATEWAY: '0x9A665c32b9Bf70d6de23596F6e22093F82F4Cda6',
+      // RATES_FACTORY: '0xcC47c4Fe1F7f29ff31A8b62197023aC8553C7896',
+      // REPAY_WITH_COLLATERAL_ADAPTER: '0x1809f186D680f239420B56948C58F8DbbCdf1E18',
+      // SWAP_COLLATERAL_ADAPTER: '0x872fBcb1B582e8Cd0D0DD4327fBFa0B4C2730995',
+      // LISTING_ENGINE: '0xE202F2fc4b6A37Ba53cfD15bE42a762A645FCA07',
+      WALLET_BALANCE_PROVIDER: '0xf2458630b18C2B8A9429D82D5E25F6119ECC06E6',
+      UI_POOL_DATA_PROVIDER: '0x0E8b2b2014bED8724FE984644531c1d57032BdB2',
+      GAUGE_FACTORY: '0x16fAe644E93460d67Cf96d6c55FF0A89845E3eAA',
+      GAUGE_CONTROLLER: '0xA8b2706B45EB95E5D14f8C29a3C5Cf0Cd5B4Dd7E',
+      MINTER: '0x94aFb2C17af24cFAcf19f364628F459dfAB2688f'
+      // UI_INCENTIVE_DATA_PROVIDER: '0x162A7AC02f547ad796CA549f757e2b8d1D9b10a6',
+      // DELEGATION_AWARE_A_TOKEN_IMPL_REV_1: '0x21714092D90c7265F52fdfDae068EC11a23C6248',
+    },
+  },
   {
     name: 'AaveV3Sepolia',
     chainId: ChainId.sepolia,
