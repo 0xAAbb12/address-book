@@ -10,7 +10,7 @@ import aTokenV3ABI from './abi/HToken.json';
 import stableDebtTokenV3ABI from './abi/StableDebtToken.json';
 import variableDebtTokenV3ABI from './abi/VariableDebtToken.json';
 import collectorV3ABI from './abi/collector_v3_abi.json';
-import rewardsControllerABI from './abi/rewardsController_v3_abi.json';
+// import rewardsControllerABI from './abi/rewardsController_v3_abi.json';
 import uipooldataProviderABI from './abi/uipooldata_provider.json';
 import {
   bytes32toAddress,

@@ -5,6 +5,8 @@ import {AaveV3Ethereum} from "./AaveV3Ethereum.sol";
 import {AaveV3Goerli} from "./AaveV3Goerli.sol";
 import {AaveV3Sepolia} from './AaveV3Sepolia.sol';
 import {AaveV3Hope} from './AaveV3Hope.sol';
+import {AaveV3BaseGoerli} from './AaveV3BaseGoerli.sol';
+import {AaveV3ArbitrumGoerli} from './AaveV3ArbitrumGoerli.sol';
 
 import {AaveGovernanceV2, IGovernanceStrategy} from './AaveGovernanceV2.sol';
 import {IAaveEcosystemReserveController, AaveMisc} from './AaveMisc.sol';

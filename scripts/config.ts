@@ -19,11 +19,13 @@ export enum ChainId {
   harmony = 1666600000,
   sepolia = 11155111,
   hope = 1337,
+  base = 8453,
+  base_goerli = 84531
 }
 
 const RPC_PROVIDERS = {
-  [ChainId.mainnet]: 'https://eth.llamarpc.com',
-  [ChainId.goerli]: 'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+  [ChainId.mainnet]: 'https://rpc.flashbots.net',
+  [ChainId.goerli]: 'https://eth-goerli.api.onfinality.io/public',
   [ChainId.mumbai]: 'https://polygon-testnet.public.blastapi.io',
   [ChainId.polygon]: 'https://polygon-rpc.com',
   [ChainId.fuji]: 'https://api.avax-test.network/ext/bc/C/rpc',
@@ -35,8 +37,10 @@ const RPC_PROVIDERS = {
   [ChainId.optimism_goerli]: 'https://goerli.optimism.io',
   [ChainId.fantom]: 'https://rpc.ftm.tools',
   [ChainId.fantom_testnet]: 'https://rpc.ankr.com/fantom_testnet',
-  [ChainId.sepolia]: 'https://sepolia-ha.lteco.cc/sepolia',
+  [ChainId.sepolia]: 'https://rpc.sepolia.org',
   [ChainId.hope]: 'https://ganache-test2.hivefin.net',
+  [ChainId.base]: 'https://mainnet.base.org',
+  [ChainId.base_goerli]: 'https://goerli.base.org'
 } as const;
 
 export interface Pool {
@@ -65,6 +69,7 @@ export interface Pool {
     GAUGE_FACTORY?: string;
     GAUGE_CONTROLLER?: string;
     MINTER?: string
+    BRIDGE_OFTV_GATEWAY?: string
   };
 }
 
@@ -112,7 +117,8 @@ export const pools: Pool[] = [
       // UI_INCENTIVE_DATA_PROVIDER: '0x31f9f58F85679282FF0dD5d4090020b3cC5bbFc4',
       GAUGE_FACTORY: '0x30a36f63ee78d8DCbEEf0fc40fFFA3f1BE8A2D75',
       GAUGE_CONTROLLER: '0x405604a1F28e89B736353016CF504Fe26C0E32Df',
-      MINTER: '0x2DD369a0126B014f5A574f92FB5510B4EaB4eF01'
+      MINTER: '0x2DD369a0126B014f5A574f92FB5510B4EaB4eF01',
+      BRIDGE_OFTV_GATEWAY: '0x7e320aF28BBdd67b3E61a1a29b5b58fa98caee96'
     },
   },
   // {
@@ -143,10 +149,43 @@ export const pools: Pool[] = [
       FAUCET: '0x13550d05Ea6a8907d295e4f17e707E4b43d2e26D',
       WALLET_BALANCE_PROVIDER: '0xA33f3600d7a39D4CAA3CA6fe20044584e7da14D6',
       UI_POOL_DATA_PROVIDER: '0x190aE06f2dF16BDcddFaEeB6949A6ef94a12a6a0',
-      // UI_INCENTIVE_DATA_PROVIDER: '0xf4Ce3624c8D047aF8b069D044f00bF6774B4dEc0',
       GAUGE_FACTORY: '0x628b88aaa37202a3c4e977F867bfc6D5d9CB45e1',
       GAUGE_CONTROLLER: '0x4c2D5F39D7e936Ca9BE04feB665971e61B793Acb',
       MINTER: '0xf38F371b16Aa1e3396A64BC03e4995C9B67fb3F3'
+    },
+  },
+  {
+    name: 'AaveV3BaseGoerli',
+    chainId: ChainId.base_goerli,
+    addressProvider: '0x3bC15766fE9b22AFc1fBa76B942cd537c3948124',
+    version: 3,
+    testnet: true,
+    additionalAddresses: {
+      WETH_GATEWAY: '0x8DB3d74A94D66e1ab5EC2EC6806F7AeCb67ed5A6',
+      FAUCET: '0x13550d05Ea6a8907d295e4f17e707E4b43d2e26D',
+      WALLET_BALANCE_PROVIDER: '0xeD2706F70bbFCE0f952F85EfFA86767555C549e2',
+      UI_POOL_DATA_PROVIDER: '0x2eC0FFB54B04FF43529820202bEd20A2D1Bd970b',
+      GAUGE_FACTORY: '0x628b88aaa37202a3c4e977F867bfc6D5d9CB45e1',
+      GAUGE_CONTROLLER: '0x4c2D5F39D7e936Ca9BE04feB665971e61B793Acb',
+      MINTER: '0xf38F371b16Aa1e3396A64BC03e4995C9B67fb3F3',
+      BRIDGE_OFTV_GATEWAY: '0x7e320aF28BBdd67b3E61a1a29b5b58fa98caee96'
+    },
+  },
+  {
+    name: 'AaveV3ArbitrumGoerli',
+    chainId: ChainId.arbitrum_goerli,
+    addressProvider: '0x3bC15766fE9b22AFc1fBa76B942cd537c3948124',
+    version: 3,
+    testnet: true,
+    additionalAddresses: {
+      WETH_GATEWAY: '0x8DB3d74A94D66e1ab5EC2EC6806F7AeCb67ed5A6',
+      FAUCET: '0x13550d05Ea6a8907d295e4f17e707E4b43d2e26D',
+      WALLET_BALANCE_PROVIDER: '0xeD2706F70bbFCE0f952F85EfFA86767555C549e2',
+      UI_POOL_DATA_PROVIDER: '0x2eC0FFB54B04FF43529820202bEd20A2D1Bd970b',
+      GAUGE_FACTORY: '0x628b88aaa37202a3c4e977F867bfc6D5d9CB45e1',
+      GAUGE_CONTROLLER: '0x4c2D5F39D7e936Ca9BE04feB665971e61B793Acb',
+      MINTER: '0xf38F371b16Aa1e3396A64BC03e4995C9B67fb3F3',
+      BRIDGE_OFTV_GATEWAY: '0x7e320aF28BBdd67b3E61a1a29b5b58fa98caee96'
     },
   },
 ].map((m) => ({

@@ -54,6 +54,8 @@ library AaveV3Sepolia {
   address internal constant GAUGE_CONTROLLER = 0x405604a1F28e89B736353016CF504Fe26C0E32Df;
 
   address internal constant MINTER = 0x2DD369a0126B014f5A574f92FB5510B4EaB4eF01;
+
+  address internal constant BRIDGE_OFTV_GATEWAY = 0x7e320aF28BBdd67b3E61a1a29b5b58fa98caee96;
 }
 
 library AaveV3SepoliaAssets {

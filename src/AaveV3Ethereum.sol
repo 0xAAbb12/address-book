@@ -21,7 +21,7 @@ library AaveV3Ethereum {
   IACLManager internal constant ACL_MANAGER =
     IACLManager(0xCeE234eEd85EaC4FE9f040fBEAc5Df10eaf71318);
 
-  address internal constant ACL_ADMIN = 0x17002566cC3508DFa3C0fA52FCBCa990E42Fd510;
+  address internal constant ACL_ADMIN = 0x9f3AEc40bddcA8D8a6D54F9a9033077395013EC4;
 
   address internal constant COLLECTOR = 0x4De8cb2b7997989e0dF45eE50535F03C2aD6F3b4;
 
@@ -92,7 +92,7 @@ library AaveV3EthereumAssets {
   address internal constant USDT_ORACLE = 0x3E7d1eAB13ad0104d2750B8863b489D65364e32D;
 
   address internal constant USDT_INTEREST_RATE_STRATEGY =
-    0x1085dc280930cD66d6Ed2AC501fdAF11F3c1E974;
+    0x052B6650D6b9094c9eC6F607054691C9C3f8Fe98;
 
   address internal constant USDC_UNDERLYING = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
 
@@ -105,7 +105,7 @@ library AaveV3EthereumAssets {
   address internal constant USDC_ORACLE = 0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6;
 
   address internal constant USDC_INTEREST_RATE_STRATEGY =
-    0x7937Fa87B176356853B1882e1Dfab1745A9BFEe9;
+    0x685dF2e57505a8A62b30f9038cA34e0354b1de30;
 
   address internal constant HOPE_UNDERLYING = 0xc353Bf07405304AeaB75F4C2Fac7E88D6A68f98e;
 
@@ -118,7 +118,7 @@ library AaveV3EthereumAssets {
   address internal constant HOPE_ORACLE = 0x8b434a137bb0a98e126DcE8cA06694BCFa2CB240;
 
   address internal constant HOPE_INTEREST_RATE_STRATEGY =
-    0x772222e897Cc173fE44acB425b74A547bf7EFfbB;
+    0xe1Ed535BBA97076459A7B48E4344Ac0814C8c7aE;
 
   address internal constant stHOPE_UNDERLYING = 0xF5C6d9Fc73991F687f158FE30D4A77691a9Fd4d8;
 
@@ -131,7 +131,7 @@ library AaveV3EthereumAssets {
   address internal constant stHOPE_ORACLE = 0x8b434a137bb0a98e126DcE8cA06694BCFa2CB240;
 
   address internal constant stHOPE_INTEREST_RATE_STRATEGY =
-    0x001C3878888150c8D0f2dc7856F1259f869A6495;
+    0x9FA7FCDb88D446172B932Dbc0D64baa1d2b61b57;
 
   address internal constant WBTC_UNDERLYING = 0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599;
 
