@@ -4,3 +4,5 @@ export * as AaveV3Sepolia from './AaveV3Sepolia';
 export * as AaveV3Hope from './AaveV3Hope';
 export * as AaveV3Ethereum from './AaveV3Ethereum';
 export * as AaveV3Goerli from './AaveV3Goerli';
+export * as AaveV3BaseGoerli from './AaveV3BaseGoerli';
+export * as AaveV3ArbitrumGoerli from './AaveV3ArbitrumGoerli';
