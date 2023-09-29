@@ -49,11 +49,11 @@ library AaveV3BaseGoerli {
 
   address internal constant UI_POOL_DATA_PROVIDER = 0x2eC0FFB54B04FF43529820202bEd20A2D1Bd970b;
 
-  address internal constant GAUGE_FACTORY = 0x628b88aaa37202a3c4e977F867bfc6D5d9CB45e1;
+  address internal constant GAUGE_FACTORY = 0x90392bFEdC42975763A834b1C299578dbbD4636B;
 
-  address internal constant GAUGE_CONTROLLER = 0x4c2D5F39D7e936Ca9BE04feB665971e61B793Acb;
+  address internal constant GAUGE_CONTROLLER = 0x405604a1F28e89B736353016CF504Fe26C0E32Df;
 
-  address internal constant MINTER = 0xf38F371b16Aa1e3396A64BC03e4995C9B67fb3F3;
+  address internal constant MINTER = 0x90392bFEdC42975763A834b1C299578dbbD4636B;
 
   address internal constant BRIDGE_OFTV_GATEWAY = 0x7e320aF28BBdd67b3E61a1a29b5b58fa98caee96;
 }
