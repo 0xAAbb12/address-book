@@ -49,11 +49,11 @@ library AaveV3BaseGoerli {
 
   address internal constant UI_POOL_DATA_PROVIDER = 0x2eC0FFB54B04FF43529820202bEd20A2D1Bd970b;
 
-  address internal constant GAUGE_FACTORY = 0x90392bFEdC42975763A834b1C299578dbbD4636B;
+  address internal constant GAUGE_FACTORY = 0x49bc8E9fee846e4ce1cD460Dbf92F54Fd4683733;
 
   address internal constant GAUGE_CONTROLLER = 0x405604a1F28e89B736353016CF504Fe26C0E32Df;
 
-  address internal constant MINTER = 0x90392bFEdC42975763A834b1C299578dbbD4636B;
+  address internal constant MINTER = 0x49bc8E9fee846e4ce1cD460Dbf92F54Fd4683733;
 
   address internal constant BRIDGE_OFTV_GATEWAY = 0x7e320aF28BBdd67b3E61a1a29b5b58fa98caee96;
 }
@@ -136,4 +136,16 @@ library AaveV3BaseGoerliAssets {
 
   address internal constant WBTC_INTEREST_RATE_STRATEGY =
     0x497cB64708bbEcE1B4EEE6E0efa62B2B97c72e80;
+
+  address internal constant _UNDERLYING = 0xcc163d158B65dae4967AeD02b0f3F0Cd10AD8978;
+
+  address internal constant _A_TOKEN = 0xC80b4EB33d949a42E31D0a80e61fD77459177eFb;
+
+  address internal constant _V_TOKEN = 0xFbBdfD617eA6C7f157B182A504fbF16320583FDC;
+
+  address internal constant _S_TOKEN = 0xc137F6041aA4f2b2178dE5eB7a06614A92b0a4f7;
+
+  address internal constant _ORACLE = 0xba00A6EA87007E4cD1F95c16aa596196De54aFcA;
+
+  address internal constant _INTEREST_RATE_STRATEGY = 0xbE2E3A855986F1924f26447FfE7D8Dacf95dE796;
 }
